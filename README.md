@@ -70,6 +70,14 @@ Shop interface showing resource management and progression systems, including pe
 
 ---
 
+### Selected Code Sample
+
+[`FishData.cs`](code-samples/FishData.cs) demonstrates the data-driven structure used to define fish identity, rarity, biome, size classification, gameplay values, and visual assets through Unity ScriptableObjects.
+
+This allows fish content to be expanded and maintained without hard-coding individual fish configuration into gameplay systems.
+
+---
+
 ## Systems Developed
 
 ### Fish Data System
