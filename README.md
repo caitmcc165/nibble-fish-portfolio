@@ -21,8 +21,6 @@ Development has included translating gameplay ideas into technical requirements,
 
 ---
 
----
-
 ## Screenshots
 
 ### Pond Gameplay
@@ -168,7 +166,6 @@ This public case study will be expanded as development progresses.
 
 Planned additions include:
 
-- Gameplay screenshots
 - Architecture diagrams
 - Selected sanitized C# examples
 - System design explanations
