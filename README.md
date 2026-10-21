@@ -21,6 +21,30 @@ Development has included translating gameplay ideas into technical requirements,
 
 ---
 
+---
+
+## Screenshots
+
+### Pond Gameplay
+
+![Nibble Fish pond gameplay](images/POND-gameplay.png)
+
+Core fishing gameplay in the Pond environment, showing the player navigating around fish during an active fishing turn.
+
+### Fish Collection
+
+![Nibble Fish collection screen](images/collection%20ss.png)
+
+Collection interface used to track discovered fish and support longer-term progression and completion goals.
+
+### Shop & Upgrades
+
+![Nibble Fish shop and upgrades](images/SHOP%20upgrades.png)
+
+Shop interface showing resource management and progression systems, including permanent upgrades and future unlockable features.
+
+---
+
 ## Technologies
 
 - Unity
