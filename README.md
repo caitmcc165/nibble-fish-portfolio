@@ -61,7 +61,7 @@ Shop interface showing resource management and progression systems, including pe
 
 - Designed reusable C# gameplay systems rather than hard-coding behavior for individual game objects, improving maintainability as new fish, locations, and progression features are added.
 - Used Unity ScriptableObjects to separate fish data from gameplay logic, allowing content such as rarity, size classification, collection information, and gameplay values to be managed independently from code.
-- Developed spawning logic that uses reusable eligibility and rarity rules instead of requiring every fish to maintain its own location-specific configuration.
+- Developed a reusable fish spawning system that maintains a configurable fish pool, limits the number of active fish, and distributes initial spawns across evenly divided vertical zones to avoid clustering.
 - Implemented player movement, collision handling, collection behavior, spawning, progression, shop interactions, and persistent game-state systems.
 - Designed Bait as a gameplay resource required to begin each fishing turn and incorporated resource availability into the player flow.
 - Structured upgrades as progression systems, including permanent upgrades that unlock as players advance to new fishing locations.
@@ -80,6 +80,11 @@ This allows fish content to be expanded and maintained without hard-coding indiv
 #### [`HaulReviewManager.cs`](code-samples/HaulReviewManager.cs)
 Demonstrates collection and progression logic after a fishing turn. The system calculates rewards, identifies genuinely new fish discoveries, prevents duplicate reveal events within the same haul, updates persistent discovery state, and transitions the player from individual catch reveals to a final haul summary.
 
+#### [`DiscoveryData.cs`](code-samples/DiscoveryData.cs)
+Demonstrates persistent collection-state management using a `HashSet` to prevent duplicate fish discoveries and Unity `PlayerPrefs` to save and restore discovered fish identifiers between sessions.
+
+The system only writes updated discovery data when a genuinely new fish is found, keeping the collection state synchronized with the player's progress.
+
 ---
 
 ## Systems Developed
@@ -95,15 +100,15 @@ This supports properties such as:
 - Size classification
 - Collection information
 - Gameplay values
-- Location eligibility
+- Biome association
 
 This approach separates game content from gameplay logic and makes fish data easier to maintain and expand.
 
 ### Fish Spawning
 
-The spawning system controls which fish can appear and how they are distributed throughout the fishing environment.
+The spawning system uses a configurable pool of FishData assets to determine which fish can appear during a scene.
 
-The system has evolved during development to reduce unnecessary per-fish configuration and move more spawn behavior into reusable rules based on rarity and location.
+Initial fish are distributed across evenly divided vertical spawn zones while horizontal positions are randomized. The system also limits the number of active fish and assigns each spawned object a FishData asset from the configured pool.
 
 ### Player Movement & Collision
 
