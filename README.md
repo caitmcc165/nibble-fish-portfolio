@@ -70,11 +70,15 @@ Shop interface showing resource management and progression systems, including pe
 
 ---
 
-### Selected Code Sample
+### Selected Code Samples
 
-[`FishData.cs`](code-samples/FishData.cs) demonstrates the data-driven structure used to define fish identity, rarity, biome, size classification, gameplay values, and visual assets through Unity ScriptableObjects.
+#### [`FishData.cs`](code-samples/FishData.cs)
+Demonstrates the data-driven structure used to define fish identity, rarity, biome, size classification, gameplay values, and visual assets through Unity ScriptableObjects.
 
 This allows fish content to be expanded and maintained without hard-coding individual fish configuration into gameplay systems.
+
+#### [`HaulReviewManager.cs`](code-samples/HaulReviewManager.cs)
+Demonstrates collection and progression logic after a fishing turn. The system calculates rewards, identifies genuinely new fish discoveries, prevents duplicate reveal events within the same haul, updates persistent discovery state, and transitions the player from individual catch reveals to a final haul summary.
 
 ---
 
