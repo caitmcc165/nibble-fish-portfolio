@@ -59,6 +59,19 @@ Shop interface showing resource management and progression systems, including pe
 
 ---
 
+## Technical Highlights
+
+- Designed reusable C# gameplay systems rather than hard-coding behavior for individual game objects, improving maintainability as new fish, locations, and progression features are added.
+- Used Unity ScriptableObjects to separate fish data from gameplay logic, allowing content such as rarity, size classification, collection information, and gameplay values to be managed independently from code.
+- Developed spawning logic that uses reusable eligibility and rarity rules instead of requiring every fish to maintain its own location-specific configuration.
+- Implemented player movement, collision handling, collection behavior, spawning, progression, shop interactions, and persistent game-state systems.
+- Designed Bait as a gameplay resource required to begin each fishing turn and incorporated resource availability into the player flow.
+- Structured upgrades as progression systems, including permanent upgrades that unlock as players advance to new fishing locations.
+- Debugged interactions between interconnected gameplay systems and refactored designs when early implementations introduced unnecessary complexity.
+- Managed the project iteratively from original product concept through requirements, implementation, testing, revision, and scope prioritization.
+
+---
+
 ## Systems Developed
 
 ### Fish Data System
